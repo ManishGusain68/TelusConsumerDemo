@@ -1,0 +1,20 @@
+server:
+  port: 9092
+  
+spring:
+  application:
+    name: studentConsumer
+  cloud:
+    consul:
+        config:
+         enabled: true
+         prefixes: config
+         profile-separator: '::'
+         format: YAML
+         
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"     
